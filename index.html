@@ -7,6 +7,7 @@
     <title>QuizApp</title>
 
     <link rel="stylesheet" href="style.css">
+    <script src="array.js"></script>
     <script src="script.js"></script>
 
     <!--Bootstrap file-->
@@ -31,25 +32,25 @@
             <div class="card-body">
                 <h5 class="card-title" id="questionText">Question</h5>
 
-                <div class="card mb-2 quiz-answer-card">
+                <div class="card mb-2 quiz-answer-card" onclick="answer('answer_1')">
                     <div class="card-body" id="answer_1">
                         Answer
                     </div>
                 </div>
 
-                <div class="card mb-2 quiz-answer-card">
+                <div class="card mb-2 quiz-answer-card" onclick="answer('answer_2')">
                     <div class="card-body" id="answer_2">
                         Answer
                     </div>
                 </div>
 
-                <div class="card mb-2 quiz-answer-card">
+                <div class="card mb-2 quiz-answer-card" onclick="answer('answer_3')">
                     <div class="card-body" id="answer_3">
                         Answer
                     </div>
                 </div>
 
-                <div class="card mb-2 quiz-answer-card">
+                <div class="card mb-2 quiz-answer-card" onclick="answer('answer_4')">
                     <div class="card-body" id="answer_4">
                         Answer
                     </div>
@@ -59,10 +60,10 @@
                     
                     
                     <span>
-                        <b>1</b> of <b id="all-questions">5</b> questions
+                        <b id="question-number">1</b> of <b id="all-questions">5</b> questions
                     </span>
 
-                    <button class="btn btn-secondary">Next</button>
+                    <button onclick="nextQuestion()" class="btn btn-secondary" id="next-button" disabled>Next</button>
 
                 </div>
 
