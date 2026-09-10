@@ -1,5 +1,6 @@
 
 let currentQuestion = 0;
+let rightQuestions = 0; 
 
 function init() {
     document.getElementById("all-questions").innerHTML = questions.length;
@@ -11,6 +12,10 @@ function showQuestion() {
     if (currentQuestion >= questions.length) {
         document.getElementById('end-screen').style = "";
         document.getElementById('question-body').style = 'display:none';
+        document.getElementById('pencil-image').style = 'display:none';
+
+        document.getElementById('amount-of-questions').innerHTML = questions.length;
+        document.getElementById('amount-of-right-questions').innerHTML = rightQuestions;
     }
     else {
 
@@ -35,6 +40,7 @@ function answer(selection) {
 
     if (selectedQuestionNumber == question['correctAnswer']) {
         document.getElementById(selection).parentNode.classList.add('bg-success');
+        rightQuestions++;
     }
     else {
         document.getElementById(selection).parentNode.classList.add('bg-danger');
