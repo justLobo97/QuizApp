@@ -17,7 +17,7 @@
         crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body onload="init()">
 
     <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
@@ -29,28 +29,28 @@
         <div class="card quiz-card">
             <img src="./img/pencil.jpg" class="card-img-top" alt="illustrated_background_picture">
             <div class="card-body">
-                <h5 class="card-title">Question</h5>
+                <h5 class="card-title" id="questionText">Question</h5>
 
-                <div class="card mb-2">
-                    <div class="card-body">
+                <div class="card mb-2 quiz-answer-card">
+                    <div class="card-body" id="answer_1">
                         Answer
                     </div>
                 </div>
 
-                <div class="card mb-2">
-                    <div class="card-body">
+                <div class="card mb-2 quiz-answer-card">
+                    <div class="card-body" id="answer_2">
                         Answer
                     </div>
                 </div>
 
-                <div class="card mb-2">
-                    <div class="card-body">
+                <div class="card mb-2 quiz-answer-card">
+                    <div class="card-body" id="answer_3">
                         Answer
                     </div>
                 </div>
 
-                <div class="card mb-2">
-                    <div class="card-body">
+                <div class="card mb-2 quiz-answer-card">
+                    <div class="card-body" id="answer_4">
                         Answer
                     </div>
                 </div>
@@ -59,7 +59,7 @@
                     
                     
                     <span>
-                        <b>1</b> of <b>5</b> questions
+                        <b>1</b> of <b id="all-questions">5</b> questions
                     </span>
 
                     <button class="btn btn-secondary">Next</button>
