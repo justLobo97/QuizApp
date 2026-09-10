@@ -9,7 +9,8 @@ function init() {
 function showQuestion() {
 
     if (currentQuestion >= questions.length) {
-        
+        document.getElementById('end-screen').style = "";
+        document.getElementById('question-body').style = 'display:none';
     }
     else {
 

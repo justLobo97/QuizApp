@@ -29,7 +29,26 @@
     <div class="container">
         <div class="card quiz-card">
             <img src="./img/pencil.jpg" class="card-img-top" alt="illustrated_background_picture">
-            <div class="card-body">
+            
+            <div class="card-body" id="end-screen" style="display:none;">
+                
+                <div class="text-center">
+                    <b>Quiz ended ! </b>
+                </div>
+
+                <div>
+                    <img class="width-100" src="./img/trophy.png" alt="trophy-icon">
+                </div>
+
+                <div class="text-center">
+                    You have <b>XX</b> of <b>XX</b> right answers !
+                </div>
+
+            </div>
+            
+            
+            
+            <div class="card-body" id="question-body">
                 <h5 class="card-title" id="questionText">Question</h5>
 
                 <div class="card mb-2 quiz-answer-card" onclick="answer('answer_1')">
