@@ -31,6 +31,12 @@ body {
     background-color: rgba(0,0,0,0.1);
 }
 
+.button-row {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+}
+
 .bg-success, .bg-danger {
     color: white !important;
 }

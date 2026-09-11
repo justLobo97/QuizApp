@@ -1,6 +1,8 @@
 
 let currentQuestion = 0;
 let rightQuestions = 0;
+let audioSuccess = new Audio('sounds/success.wav');
+let audioFail = new Audio('sounds/fail.wav');
 
 function init() {
     document.getElementById("all-questions").innerHTML = questions.length;
@@ -43,11 +45,13 @@ function answer(selection) {
 
     if (selectedQuestionNumber == question['correctAnswer']) {
         document.getElementById(selection).parentNode.classList.add('bg-success');
+        audioSuccess.play();
         rightQuestions++;
     }
     else {
         document.getElementById(selection).parentNode.classList.add('bg-danger');
         document.getElementById(idOfRightAnswer).parentNode.classList.add('bg-success');
+        audioFail.play();
     }
 
     document.getElementById('next-button').disabled = false;
@@ -71,4 +75,16 @@ function resetAnswerButtons() {
     document.getElementById('answer_3').parentNode.classList.remove('bg-danger');
     document.getElementById('answer_4').parentNode.classList.remove('bg-success');
     document.getElementById('answer_4').parentNode.classList.remove('bg-danger');
+}
+
+function restartGame() {
+    document.getElementById('pencil-image').style = '';
+    document.getElementById('end-screen').style = 'display:none';
+    document.getElementById('question-body').style = '';
+
+    currentQuestion = 0;
+    rightQuestions = 0;
+
+    init();
+
 }
