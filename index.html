@@ -27,11 +27,17 @@
     </nav>
 
     <div class="container">
+
         <div class="card quiz-card">
             <img id="pencil-image" src="./img/pencil.jpg" class="card-img-top" alt="illustrated_background_picture">
-            
+
+            <div class="progress">
+                <div class="progress-bar" id="progress-bar" role="progressbar" style="width: 0%;">25%</div>
+            </div>
+
+
             <div class="card-body" id="end-screen" style="display:none;">
-                
+
                 <div class="text-center">
                     <b>Quiz ended ! </b>
                 </div>
@@ -41,13 +47,14 @@
                 </div>
 
                 <div class="text-center">
-                    You have <b id="amount-of-right-questions">XX</b> of <b id="amount-of-questions">XX</b> right answers !
+                    You have <b id="amount-of-right-questions">XX</b> of <b id="amount-of-questions">XX</b> right
+                    answers !
                 </div>
 
             </div>
-            
-            
-            
+
+
+
             <div class="card-body" id="question-body">
                 <h5 class="card-title" id="questionText">Question</h5>
 
@@ -76,8 +83,8 @@
                 </div>
 
                 <div class="question-footer">
-                    
-                    
+
+
                     <span>
                         <b id="question-number">1</b> of <b id="all-questions">5</b> questions
                     </span>
